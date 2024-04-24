@@ -1,0 +1,12 @@
+#nodapay-button:hover {
+    border-radius: 10px 7px 10px 7px;
+    border-width: 3px 3px 7px 7px;
+}
+
+#nodapay-button {
+    border: 6px solid  rgb(51, 51, 51);
+    background-color: transparent;
+    border-radius: 11px;
+    color: transparent !important;
+    padding: 0;
+}
