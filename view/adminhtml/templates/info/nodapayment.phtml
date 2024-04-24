@@ -1,0 +1,11 @@
+<?php
+
+use Magento\Framework\Escaper;
+use Noda\Payments\Block\Info\Nodapayment;
+
+/** @var Escaper $escaper */
+/** @var Nodapayment $block */
+
+$paymentTitle = $block->getMethod()->getConfigData('title', $block->getInfo()->getOrder()->getStoreId());
+?>
+<?= $escaper->escapeHtml($paymentTitle) ?>

@@ -1,0 +1,11 @@
+<?php
+
+use Magento\Framework\Escaper;
+use Noda\Payments\Block\Info\Nodapayment;
+
+/** @var Escaper $escaper */
+/** @var Nodapayment $block */
+?>
+<dl class="payment-method checkmemo">
+    <dt class="title"><?= $escaper->escapeHtml($block->getMethod()->getTitle()) ?></dt>
+</dl>

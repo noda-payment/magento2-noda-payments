@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Webapi:etc/webapi.xsd">
+    <route url="/V1/nodapay/webhook" method="POST">
+        <service class="Noda\Payments\Api\WebhookInterface" method="updatePaymentStatus"/>
+        <resources>
+            <resource ref="anonymous"/>
+        </resources>
+    </route>
+    <route url="/V1/nodapay/logo" method="GET">
+        <service class="Noda\Payments\Api\LogoAcquirerInterface" method="getLogoUrl"/>
+        <resources>
+            <resource ref="anonymous" />
+        </resources>
+    </route>
+    <route url="/V1/nodapay/payUrl" method="POST">
+        <service class="Noda\Payments\Api\PayUrlInterface" method="getPayUrl"/>
+        <resources>
+            <resource ref="anonymous"/>
+        </resources>
+    </route>
+</routes>

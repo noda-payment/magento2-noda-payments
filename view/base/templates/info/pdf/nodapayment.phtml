@@ -1,0 +1,11 @@
+<?php
+
+use Magento\Framework\Escaper;
+use Noda\Payments\Block\Info\Nodapayment;
+
+/** @var Escaper $escaper */
+/** @var Nodapayment $block */
+?>
+<?= $escaper->escapeHtml($block->getMethod()->getTitle()) ?>
+    {{pdf_row_separator}}
+

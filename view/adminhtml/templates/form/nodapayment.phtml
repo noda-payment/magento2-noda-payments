@@ -1,0 +1,16 @@
+<?php
+
+use Noda\Payments\Block\Form\Nodapayment;
+use Magento\Framework\View\Helper\SecureHtmlRenderer;
+use Magento\Framework\Escaper;
+
+/** @var Escaper $escaper */
+/** @var Nodapayment $block */
+/** @var SecureHtmlRenderer $secureRenderer */
+?>
+<fieldset class="admin__fieldset payment-method" id="payment_form_<?= $escaper->escapeHtml($block->getMethodCode()) ?>">
+</fieldset>
+<?= /* @noEscape */ $secureRenderer->renderStyleAsTag(
+    "display:none",
+    'fieldset#payment_form_' . $escaper->escapeJs($block->getMethodCode())
+) ?>

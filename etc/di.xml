@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Magento\Config\Model\Config\TypePool">
+        <arguments>
+            <argument name="sensitive" xsi:type="array">
+                <item name="payment/nodapayment/mailing_address" xsi:type="string">1</item>
+            </argument>
+        </arguments>
+    </type>
+    <preference for="Noda\Payments\Api\LogoAcquirerInterface"
+                type="Noda\Payments\Model\Api\LogoAcquirer" />
+    <preference for="Noda\Payments\Api\WebhookInterface"
+                type="Noda\Payments\Model\Api\Webhook" />
+    <preference for="Noda\Payments\Api\PayUrlInterface"
+                type="Noda\Payments\Model\Api\PayUrl" />
+    <preference for="Noda\Payments\Api\Data\WebhookRequestInterface"
+                type="Noda\Payments\Model\Data\WebhookRequest" />
+    <preference for="Noda\Payments\Api\Data\PayUrlRequestInterface"
+                type="Noda\Payments\Model\Data\PayUrlRequest" />
+    <preference for="Noda\Payments\Api\Data\PayUrlResponseInterface"
+                type="Noda\Payments\Model\Data\PayUrlResponse" />
+    <preference for="Noda\Payments\Api\Data\LogoInformationInterface"
+                type="Noda\Payments\Model\Data\LogoInformation" />
+</config>
