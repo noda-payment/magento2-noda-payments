@@ -1,5 +1,5 @@
 {
-    "name": "noda-live/module-payments",
+    "name": "noda-payments/module-payments",
     "type": "magento2-module",
     "description": "Noda Payment Gateway integration for Magento 2",
     "version": "1.0.0",
